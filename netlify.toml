@@ -1,0 +1,11 @@
+[build]
+  functions = "functions-build"  # This points to your functions directory
+  publish = "public"        # This points to your static assets directory
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/app/:splat"  # Redirect all requests to the serverless function
+  status = 200
+
+  [dev]
+  functions = "functions"
