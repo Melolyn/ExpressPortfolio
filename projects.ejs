@@ -1,0 +1,68 @@
+<!--Lynn Zein - 301280312-->
+
+
+<head>
+    
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Web Projects</title>
+</head>
+<body>
+    <div>
+        <h1 id="shakeImage" class="header-container" style="cursor: pointer;">
+            <a class="welcomemessage">Welcome</a>
+            <img src="smileywelcome.jpg" alt="Welcome Smiley" class="imagesize">
+          </h1>
+        <nav id="navbar">
+            <ul>
+                <li><a href="/">Home Page</a></li>
+                <li><a href="/aboutme">About Me</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="https://www.youtube.com/@Melolynflow" target="_blank">Music</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/contactme">Contact Me</a></li>
+                <img src="melolynlogo.png" alt="MelolynLogo" class="logosize">
+            </ul>
+        <h1 class="header2">Web Projects</h1>
+        <div class="projects-container">
+            <div class="project-card" onclick="openModal('jobapplicationform.png')">
+                <img src="jobapplicationform.png" alt="Job Application Form">
+                <h3>Job Application Form</h3>
+                <p>Project for course "Client Web Design"</p>
+            </div>
+            <div class="project-card" onclick="openModal('feedbackform.png')">
+                <img src="feedbackform.png" alt="Feedback Form">
+                <h3>Feedback Form</h3>
+                <p>Project for course "Web Interface Design"</p>
+            </div>
+            <div class="project-card" onclick="openModal('conservationswebsite.png')">
+                <img src="conservationswebsite.png" alt="Conservations Website">
+                <h3>Conservations Website</h3>
+                <p>Another project for "Client Web Design"</p>
+            </div>
+            <div class="project-card" onclick="openModal('dragandmove.png')">
+                <img src="dragandmove.png" alt="Drag And Move">
+                <h3>Drag And Move</h3>
+                <p>Drag and move the face into the squares</p>
+            </div>
+        </div>
+    </div>
+
+  
+    <div id="modal" class="modal" style="display:none;" onclick="closeModal()">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="Project">
+        </div>
+    </div>
+
+    <script>
+        function openModal(imageUrl) {
+            document.getElementById('modalImage').src = imageUrl;
+            document.getElementById('modal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+</body>

@@ -1,0 +1,51 @@
+
+ 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to My Site</title>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+  
+  <div>
+    <h1 id="shakeImage" class="header-container" style="cursor: pointer;">
+      <a class="welcomemessage">Welcome</a>
+      <img src="smileywelcome.jpg" alt="Welcome Smiley" class="imagesize">
+    </h1>
+
+    <nav id="navbar">
+      <ul>
+        <li><a href="/">Home Page</a></li>
+        <li><a href="/aboutme">About Me</a></li>
+        <li><a href="/projects">Projects Page</a></li>
+        <li><a href="https://www.youtube.com/@Melolynflow" target="_blank">Music</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/contactme">Contact Me</a></li>
+        <img src="melolynlogo.png" alt="Melolyn Logo" class="logosize">
+      </ul>
+    </nav>
+
+    <img src="KOFshot.png" alt="Music Video Shot" class="backgroundimage">
+    <h2 class="header2">Mission Statement</h2>
+    <p class="paragraph">
+      Welcome to my personal space where creativity meets technology. As a web developer and artist, I combine innovation and rhythm to bring my projects to life. This site showcases my journey in both the digital world and music, sharing my passion for coding and rap with the world. Explore my web projects and my original tracks, a flow of the intersection of art and tech.
+    </p>
+  </div>
+
+ <script>
+    const image = document.getElementById('shakeImage'); // Select the h1 element
+
+const handleShake = () => {
+  image.classList.add('shake'); // Add shake class
+  setTimeout(() => {
+    image.classList.remove('shake'); // Remove shake class after animation
+  }, 500);
+};
+
+// Add the click event listener
+if (image) {
+  image.addEventListener('click', handleShake);}
+ </script>
+</body>
+
